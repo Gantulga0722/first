@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "name": "macbook",
+      "price": 1200
+    },
+    {
+      "name": "Iphone",
+      "price": 1000
+    }
+  ],
+  "users": [
+    {
+      "name": "Khosoo",
+      "age": 22
+    },
+    {
+      "name": "Baganaa",
+      "age": 25
+    }
+  ]
+}
