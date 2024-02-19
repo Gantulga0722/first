@@ -12,7 +12,7 @@ app.get("/users", (req, res) => {
 });
 app.get("/usernames", (req, res) => {
   res.type = "application/json";
-  res.send({ username: users.map((a) => a.name) });
+  res.send({ username: users.map((user) => user.name) });
 });
 
 app.listen(3001, () => {
