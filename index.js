@@ -3,7 +3,7 @@ const { products, users } = require("./dummy.json");
 
 const app = express();
 
-var bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 const fs = require("fs");
@@ -57,6 +57,18 @@ app.post("/add-user", (req, res) => {
   });
   res.status(200);
   res.send("User added successfully");
+});
+
+app.post("/submitUserData", (req, res) => {
+  const { name, age } = req.body;
+
+  // Perform any necessary validation or processing here
+
+  // Save data to a file (you might want to use a database in a real-world scenario)
+  const data = `Name: ${name}, Age: ${age}\n`;
+  fs.appendFileSync("userData.txt", data);
+
+  res.json({ success: true });
 });
 
 app.listen(3001, () => {
