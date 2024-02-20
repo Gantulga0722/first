@@ -66,7 +66,7 @@ app.post("/submitUserData", (req, res) => {
 
   // Save data to a file (you might want to use a database in a real-world scenario)
   const data = `Name: ${name}, Age: ${age}\n`;
-  fs.appendFileSync("userData.txt", data);
+  fs.appendFileSync("dummy.json", data);
 
   res.json({ success: true });
 });
